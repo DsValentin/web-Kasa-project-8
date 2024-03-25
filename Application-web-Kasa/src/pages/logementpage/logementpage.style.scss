@@ -1,0 +1,169 @@
+@import "../../sass/main";
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.LogementPage {
+  flex: 1;
+  padding: 2rem;
+
+  .Carousel {
+    width: 100%;
+    height: 415px;
+    margin: 0;
+
+    @include respond(tab-port) {
+      height: 350px;
+    }
+
+    @include respond(phone) {
+      height: 255px;
+    }
+  }
+
+  .Infos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 3rem;
+    width: 100%;
+    max-width: 1160px;
+
+    @include respond(tab-land) {
+      width: 100%;
+    }
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    .Details {
+      color: #ff6060;
+
+      h1 {
+        font-size: 36px;
+        margin-bottom: 5px;
+
+        @include respond(phone) {
+          margin-bottom: 10px;
+          font-size: 18px;
+        }
+      }
+
+      p {
+        font-size: 18px;
+        color: black;
+        margin-bottom: 2rem;
+
+        @include respond(phone) {
+          font-size: 14px;
+        }
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        height: 25px;
+        background-color: #ff6060;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 10px;
+        font-size: 14px;
+
+        @include respond(phone) {
+          height: 18px;
+          padding: 10px 15px;
+          border-radius: 5px;
+          font-size: 10px;
+        }
+      }
+    }
+
+    .User {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      color: #ff6060;
+
+      @include respond(phone) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .Profile {
+        display: flex;
+        align-items: center;
+
+        div {
+          margin-right: 8px;
+          font-size: 18px;
+
+          @include respond(phone) {
+            font-size: 12px;
+          }
+        }
+
+        .host-picture img {
+          width: 64px;
+          height: 64px;
+          border-radius: 50%;
+
+          @include respond(phone) {
+            width: 32px;
+            height: 32px;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+
+    .Rating {
+      @include respond(phone) {
+        order: -1;
+      }
+    }
+  }
+
+  .MoreInfos {
+    display: flex;
+    flex-direction: row;
+    gap: 76px;
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto 40px;
+
+    @include respond(tab-land) {
+      width: 100%;
+    }
+
+    @include respond(tab-port) {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+      gap: 0%;
+      margin: 0 auto 20px;
+    }
+  }
+}

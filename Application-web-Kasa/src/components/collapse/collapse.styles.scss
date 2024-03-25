@@ -1,0 +1,76 @@
+@import "../../sass/main";
+
+.collapse {
+  width: 75%;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 3rem auto 0;
+
+  .arrow {
+    transition: all 0.5s;
+  }
+
+  &.open {
+    .arrow {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &.close {
+    .arrow {
+      transform: rotate(0deg);
+    }
+  }
+
+  .collapse-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    background-color: #ff6060;
+
+    h2 {
+      font-size: 18px;
+      font-weight: 500;
+      color: white;
+      margin: 0;
+    }
+
+    .arrow {
+      font-size: 20px;
+      color: white;
+    }
+  }
+
+  .collapse-content {
+    background-color: #f8f8f8;
+    color: black;
+    transform-origin: center top;
+    font-size: 18px;
+    transition: all 0.5s;
+
+    &.open {
+      transform: scaleY(1);
+      height: auto;
+      opacity: 1;
+      padding: 3rem 2rem;
+    }
+
+    &.close {
+      transform: scaleY(0);
+      height: 0px;
+      opacity: 0;
+      padding: 0 0 0 2rem;
+    }
+  }
+}
+.collapse {
+  @include respond(phone) {
+    margin: 13px auto;
+    width: 100%;
+  }
+  @include respond(tab-land) {
+    width: 100%;
+  }
+}

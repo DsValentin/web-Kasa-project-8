@@ -1,0 +1,25 @@
+@import "../../sass/main";
+.Stars {
+  display: flex;
+  align-items: center;
+
+  .star {
+    font-size: 2.5rem;
+    margin-right: 10px;
+    margin-top: 2rem;
+
+    &.orange-star {
+      color: #ff6060;
+    }
+
+    &.grey-star {
+      color: #ccc;
+    }
+  }
+
+  @include respond(phone) {
+    .star {
+      font-size: 1.35rem;
+    }
+  }
+}

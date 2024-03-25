@@ -1,0 +1,31 @@
+@import "../../sass/main";
+
+.banner {
+  margin: 20px 14rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include respond(tab-land) {
+    margin: 2rem 4rem;
+  }
+
+  @include respond(tab-port) {
+    margin: 2rem auto;
+    width: 96%;
+    border-radius: 10px;
+    text-align: left;
+  }
+
+  @include respond(phone) {
+    width: 90%;
+    height: 111px;
+  }
+}

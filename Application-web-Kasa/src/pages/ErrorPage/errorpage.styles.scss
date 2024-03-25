@@ -1,0 +1,81 @@
+@import "../../sass/main";
+
+.Error404 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  color: #ff6060;
+
+  h1 {
+    font-size: 18rem;
+    margin-bottom: 8.68r;
+
+    @include respond(tab-land) {
+      font-size: 16rem;
+      margin-bottom: 100px;
+    }
+
+    @include respond(tab-port) {
+      font-size: 14rem;
+      margin-bottom: 80px;
+    }
+
+    @include respond(phone) {
+      font-size: 6rem;
+      margin-bottom: 60px;
+    }
+  }
+
+  .error-message {
+    font-size: 2.25rem;
+    color: #ff6060;
+    margin-bottom: 8.68rem;
+
+    @include respond(tab-land) {
+      font-size: 30px;
+      margin-bottom: 3rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 24px;
+      margin-bottom: 4rem;
+    }
+
+    @include respond(phone) {
+      font-size: 18px;
+      margin-bottom: 5rem;
+    }
+  }
+
+  .return-link {
+    font-size: 18px;
+
+    color: black;
+
+    transition: color 0.3s;
+
+    &:hover {
+      color: #ff6060;
+    }
+    cursor: pointer;
+    margin-bottom: 5rem;
+
+    @include respond(tab-land) {
+      font-size: 17px;
+      margin-bottom: 6rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 15px;
+      margin-bottom: 7rem;
+    }
+
+    @include respond(phone) {
+      font-size: 14px;
+      margin-bottom: 8rem;
+    }
+  }
+}
