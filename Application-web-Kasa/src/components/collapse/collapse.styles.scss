@@ -45,7 +45,7 @@
 
   .collapse-content {
     background-color: #f8f8f8;
-    color: black;
+
     transform-origin: center top;
     font-size: 18px;
     transition: all 0.5s;
@@ -55,6 +55,7 @@
       height: auto;
       opacity: 1;
       padding: 3rem 2rem;
+      list-style: none;
     }
 
     &.close {
