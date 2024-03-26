@@ -70,6 +70,8 @@ const LogementPage = () => {
               isOpen={isDescriptionOpen}
               onClick={() => setIsDescriptionOpen(!isDescriptionOpen)}
             />
+            {/* Modification pour que le contenue du collaps equipement soit en
+          liste */}
             <Collaps
               title="Equipements"
               content={house.equipments.map((equipement, i) => (
