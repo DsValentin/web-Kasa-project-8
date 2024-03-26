@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Carousel from "../../components/carrousel/carrousel.jsx";
 import Collaps from "../../components/collapse/Collapse.jsx";
-import Stars from "../../components/rating/star_rating";
+import Stars from "../../components/rating/star_rating.jsx";
 import logements from "../../logements.json";
 import "./logementpage.style.scss";
 
@@ -72,7 +72,9 @@ const LogementPage = () => {
             />
             <Collaps
               title="Equipements"
-              content={house.equipments}
+              content={house.equipments.map((equipement, i) => (
+                <li key={i}>{equipement}</li>
+              ))}
               isOpen={isEquipmentsOpen}
               onClick={() => setIsEquipmentsOpen(!isEquipmentsOpen)}
             />
